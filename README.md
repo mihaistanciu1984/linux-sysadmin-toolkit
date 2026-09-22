@@ -24,6 +24,7 @@ The repository is intended as a reference for system administrators, infrastruct
 | Oracle Linux / Networking | [Static IPv4 configuration](docs/oracle-linux/networking/static-ip.md) | [Static IP configuration tool](scripts/oracle-linux/networking/configure_static_ip.sh) |
 | Oracle Linux / System | [Enable GNOME Desktop](docs/oracle-linux/system/enable-gui.md) | Commands included |
 | Oracle Linux / System | [Scheduled user logout](docs/oracle-linux/system/scheduled-user-logout.md) | [User logout tool](scripts/oracle-linux/system/logout_logged_users.sh) |
+| Oracle Linux / Backup | [Install Proxmox Backup Client](docs/oracle-linux/backup/install-pbs-client.md) | [PBS client installer](scripts/oracle-linux/backup/install_pbs_client.sh) |
 ## Repository structure
 
 ```text
