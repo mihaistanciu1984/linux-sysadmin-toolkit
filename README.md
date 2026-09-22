@@ -20,6 +20,11 @@ The repository is intended as a reference for system administrators, infrastruct
 
 | Networking | [Connectivity troubleshooting](docs/networking/connectivity-troubleshooting.md) | [Connectivity checker](scripts/networking/check_connectivity.sh) |
 
+| Networking | [DNS troubleshooting](docs/networking/dns-troubleshooting.md) | [DNS checker](scripts/networking/check_dns.sh) |
+
+| Security | [OpenSSH server hardening](docs/security/ssh-hardening.md) | [SSH configuration audit](scripts/security/audit_ssh_config.sh) |
+
+
 ## Features
 
 * Practical Linux troubleshooting procedures
