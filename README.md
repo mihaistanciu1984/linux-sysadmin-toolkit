@@ -11,6 +11,8 @@ The repository is intended as a reference for system administrators, infrastruct
 | Storage | [Disk usage troubleshooting](docs/system/disk-usage.md) | [Disk usage checker](scripts/system/check_disk_usage.sh) |
 | Monitoring | [Glances system monitoring](docs/monitoring/glances.md) | Planned |
 
+| System | [Memory troubleshooting](docs/system/memory-troubleshooting.md) | [Memory usage checker](scripts/system/check_memory_usage.sh) |
+
 ## Features
 
 * Practical Linux troubleshooting procedures
@@ -218,3 +220,4 @@ When adding a procedure:
 The commands and scripts in this repository are provided for educational and administrative reference purposes.
 
 Always review and test commands in a non-production environment before using them on critical systems.
+
