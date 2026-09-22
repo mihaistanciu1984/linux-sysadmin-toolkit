@@ -1,0 +1,36 @@
+# Environment files and credentials
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*.backup
+*~
+.cache/
+tmp/
+
+# Archives
+*.tar
+*.tar.gz
+*.zip
+
+# Generated reports
+reports/
+output/
+
+# Editor files
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
