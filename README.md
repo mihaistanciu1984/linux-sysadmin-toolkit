@@ -18,6 +18,8 @@ The repository is intended as a reference for system administrators, infrastruct
 | System | [Systemd service management](docs/system/systemd-services.md) | [Service status checker](scripts/system/check_service.sh) |
 | System | [Linux log analysis](docs/system/log-analysis.md) | [Recent error checker](scripts/system/check_recent_errors.sh) |
 
+| Networking | [Connectivity troubleshooting](docs/networking/connectivity-troubleshooting.md) | [Connectivity checker](scripts/networking/check_connectivity.sh) |
+
 ## Features
 
 * Practical Linux troubleshooting procedures
