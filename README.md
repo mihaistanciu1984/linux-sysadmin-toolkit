@@ -14,6 +14,8 @@ The repository is intended as a reference for system administrators, infrastruct
 | System | [Memory troubleshooting](docs/system/memory-troubleshooting.md) | [Memory usage checker](scripts/system/check_memory_usage.sh) |
 
 | System | [CPU and load troubleshooting](docs/system/cpu-troubleshooting.md) | [CPU load checker](scripts/system/check_cpu_load.sh) |
+
+| System | [Systemd service management](docs/system/systemd-services.md) | [Service status checker](scripts/system/check_service.sh) |
 ## Features
 
 * Practical Linux troubleshooting procedures
