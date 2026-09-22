@@ -17,7 +17,8 @@ The repository is intended as a reference for system administrators, infrastruct
 | Networking               | [Connectivity troubleshooting](docs/networking/connectivity-troubleshooting.md)           | [Connectivity checker](scripts/networking/check_connectivity.sh)                                                      |
 | Networking               | [DNS troubleshooting](docs/networking/dns-troubleshooting.md)                             | [DNS checker](scripts/networking/check_dns.sh)                                                                        |
 | Security                 | [OpenSSH server hardening](docs/security/ssh-hardening.md)                                | [SSH configuration audit](scripts/security/audit_ssh_config.sh)                                                       |
-| HTCondor                 | [HTCondor cluster installation](docs/htcondor/cluster-installation.md)                    | [Role installer](scripts/htcondor/install_htcondor_role.sh) / [Pool checker](scripts/htcondor/check_htcondor_pool.sh) |
+| HTCondor | [HTCondor cluster installation](docs/htcondor/cluster-installation.md) | [Role installer](scripts/htcondor/install_htcondor_role.sh) |
+| HTCondor | [Role configuration and validation](docs/htcondor/role-configuration-validation.md) | [Pool checker](scripts/htcondor/check_htcondor_pool.sh) |
 | Virtualization / Proxmox | [Install Proxmox Backup Client](docs/virtualization/proxmox/pbs-client-installation.md) | [PBS client installer](scripts/virtualization/proxmox/install_pbs_client.sh) |
 | Virtualization / Proxmox | [Linux backup to Proxmox Backup Server](docs/virtualization/proxmox/pbs-client-backup.md) | [PBS backup script](scripts/virtualization/proxmox/auto_pbs_backup.sh) |
 
