@@ -25,9 +25,8 @@ The repository is intended as a reference for system administrators, infrastruct
 | Oracle Linux / System | [Enable GNOME Desktop](docs/oracle-linux/system/enable-gui.md) | Commands included |
 | Oracle Linux / System | [Scheduled user logout](docs/oracle-linux/system/scheduled-user-logout.md) | [User logout tool](scripts/oracle-linux/system/logout_logged_users.sh) |
 | Oracle Linux / Backup | [Install Proxmox Backup Client](docs/oracle-linux/backup/install-pbs-client.md) | [PBS client installer](scripts/oracle-linux/backup/install_pbs_client.sh) |
+| Oracle Linux / Database | [Install Oracle Database XE 21c](docs/oracle-linux/database/install-oracle-database-xe.md) | Commands included |
 ## Repository structure
-
-```text
 .
 |-- docs/
 |   |-- system/
@@ -38,6 +37,11 @@ The repository is intended as a reference for system administrators, infrastruct
 |   |-- backup/
 |   |-- troubleshooting/
 |   |-- htcondor/
+|   |-- oracle-linux/
+|   |   |-- backup/
+|   |   |-- database/
+|   |   |-- networking/
+|   |   `-- system/
 |   `-- virtualization/
 |       `-- proxmox/
 |-- scripts/
@@ -48,11 +52,14 @@ The repository is intended as a reference for system administrators, infrastruct
 |   |-- monitoring/
 |   |-- backup/
 |   |-- htcondor/
+|   |-- oracle-linux/
+|   |   |-- backup/
+|   |   |-- networking/
+|   |   `-- system/
 |   `-- virtualization/
 |       `-- proxmox/
 |-- .gitignore
 `-- README.md
-```
 
 ## Disk usage checker
 
