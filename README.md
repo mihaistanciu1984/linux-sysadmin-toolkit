@@ -6,9 +6,10 @@ The repository is intended as a reference for system administrators, infrastruct
 
 ## Current content
 
-| Category | Procedure                                               | Tool                                                     |
-| -------- | ------------------------------------------------------- | -------------------------------------------------------- |
-| Storage  | [Disk usage troubleshooting](docs/system/disk-usage.md) | [Disk usage checker](scripts/system/check_disk_usage.sh) |
+| Category | Procedure | Tool |
+|---|---|---|
+| Storage | [Disk usage troubleshooting](docs/system/disk-usage.md) | [Disk usage checker](scripts/system/check_disk_usage.sh) |
+| Monitoring | [Glances system monitoring](docs/monitoring/glances.md) | Planned |
 
 ## Features
 
