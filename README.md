@@ -22,6 +22,7 @@ The repository is intended as a reference for system administrators, infrastruct
 | Virtualization / Proxmox | [Install Proxmox Backup Client](docs/virtualization/proxmox/pbs-client-installation.md) | [PBS client installer](scripts/virtualization/proxmox/install_pbs_client.sh) |
 | Virtualization / Proxmox | [Linux backup to Proxmox Backup Server](docs/virtualization/proxmox/pbs-client-backup.md) | [PBS backup script](scripts/virtualization/proxmox/auto_pbs_backup.sh) |
 | Oracle Linux / Networking | [Static IPv4 configuration](docs/oracle-linux/networking/static-ip.md) | [Static IP configuration tool](scripts/oracle-linux/networking/configure_static_ip.sh) |
+| Oracle Linux / System | [Enable GNOME Desktop](docs/oracle-linux/system/enable-gui.md) | Commands included |
 ## Repository structure
 
 ```text
