@@ -16,6 +16,8 @@ The repository is intended as a reference for system administrators, infrastruct
 | System | [CPU and load troubleshooting](docs/system/cpu-troubleshooting.md) | [CPU load checker](scripts/system/check_cpu_load.sh) |
 
 | System | [Systemd service management](docs/system/systemd-services.md) | [Service status checker](scripts/system/check_service.sh) |
+| System | [Linux log analysis](docs/system/log-analysis.md) | [Recent error checker](scripts/system/check_recent_errors.sh) |
+
 ## Features
 
 * Practical Linux troubleshooting procedures
