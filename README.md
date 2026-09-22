@@ -4,58 +4,49 @@ A practical collection of Linux administration procedures, troubleshooting guide
 
 The repository is intended as a reference for system administrators, infrastructure engineers and DevOps professionals working with Linux servers.
 
-## Current content
+ ## Current content
 
-| Category | Procedure | Tool |
-|---|---|---|
-| Storage | [Disk usage troubleshooting](docs/system/disk-usage.md) | [Disk usage checker](scripts/system/check_disk_usage.sh) |
-| Monitoring | [Glances system monitoring](docs/monitoring/glances.md) | Planned |
-
-| System | [Memory troubleshooting](docs/system/memory-troubleshooting.md) | [Memory usage checker](scripts/system/check_memory_usage.sh) |
-
-| System | [CPU and load troubleshooting](docs/system/cpu-troubleshooting.md) | [CPU load checker](scripts/system/check_cpu_load.sh) |
-
-| System | [Systemd service management](docs/system/systemd-services.md) | [Service status checker](scripts/system/check_service.sh) |
-| System | [Linux log analysis](docs/system/log-analysis.md) | [Recent error checker](scripts/system/check_recent_errors.sh) |
-
-| Networking | [Connectivity troubleshooting](docs/networking/connectivity-troubleshooting.md) | [Connectivity checker](scripts/networking/check_connectivity.sh) |
-
-| Networking | [DNS troubleshooting](docs/networking/dns-troubleshooting.md) | [DNS checker](scripts/networking/check_dns.sh) |
-
-| Security | [OpenSSH server hardening](docs/security/ssh-hardening.md) | [SSH configuration audit](scripts/security/audit_ssh_config.sh) |
-
-
-## Features
-
-* Practical Linux troubleshooting procedures
-* Reusable and documented Bash scripts
-* Safe diagnostic commands
-* Parameter validation
-* Clear execution examples
-* Security-focused recommendations
-* Sanitized examples without production credentials or infrastructure data
+| Category                 | Procedure                                                                                 | Tool                                                                                                                  |
+| ------------------------ | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Storage                  | [Disk usage troubleshooting](docs/system/disk-usage.md)                                   | [Disk usage checker](scripts/system/check_disk_usage.sh)                                                              |
+| Monitoring               | [Glances system monitoring](docs/monitoring/glances.md)                                   | Planned                                                                                                               |
+| System                   | [Memory troubleshooting](docs/system/memory-troubleshooting.md)                           | [Memory usage checker](scripts/system/check_memory_usage.sh)                                                          |
+| System                   | [CPU and load troubleshooting](docs/system/cpu-troubleshooting.md)                        | [CPU load checker](scripts/system/check_cpu_load.sh)                                                                  |
+| System                   | [Systemd service management](docs/system/systemd-services.md)                             | [Service status checker](scripts/system/check_service.sh)                                                             |
+| System                   | [Linux log analysis](docs/system/log-analysis.md)                                         | [Recent error checker](scripts/system/check_recent_errors.sh)                                                         |
+| Networking               | [Connectivity troubleshooting](docs/networking/connectivity-troubleshooting.md)           | [Connectivity checker](scripts/networking/check_connectivity.sh)                                                      |
+| Networking               | [DNS troubleshooting](docs/networking/dns-troubleshooting.md)                             | [DNS checker](scripts/networking/check_dns.sh)                                                                        |
+| Security                 | [OpenSSH server hardening](docs/security/ssh-hardening.md)                                | [SSH configuration audit](scripts/security/audit_ssh_config.sh)                                                       |
+| HTCondor                 | [HTCondor cluster installation](docs/htcondor/cluster-installation.md)                    | [Role installer](scripts/htcondor/install_htcondor_role.sh) / [Pool checker](scripts/htcondor/check_htcondor_pool.sh) |
+| Virtualization / Proxmox | [Linux backup to Proxmox Backup Server](docs/virtualization/proxmox/pbs-client-backup.md) | [PBS backup script](scripts/virtualization/proxmox/auto_pbs_backup.sh)                                                |
 
 ## Repository structure
 
 ```text
 .
-├── docs/
-│   ├── system/
-│   ├── networking/
-│   ├── storage/
-│   ├── security/
-│   ├── monitoring/
-│   ├── backup/
-│   └── troubleshooting/
-├── scripts/
-│   ├── system/
-│   ├── networking/
-│   ├── storage/
-│   ├── security/
-│   ├── monitoring/
-│   └── backup/
-├── .gitignore
-└── README.md
+|-- docs/
+|   |-- system/
+|   |-- networking/
+|   |-- storage/
+|   |-- security/
+|   |-- monitoring/
+|   |-- backup/
+|   |-- troubleshooting/
+|   |-- htcondor/
+|   `-- virtualization/
+|       `-- proxmox/
+|-- scripts/
+|   |-- system/
+|   |-- networking/
+|   |-- storage/
+|   |-- security/
+|   |-- monitoring/
+|   |-- backup/
+|   |-- htcondor/
+|   `-- virtualization/
+|       `-- proxmox/
+|-- .gitignore
+`-- README.md
 ```
 
 ## Disk usage checker

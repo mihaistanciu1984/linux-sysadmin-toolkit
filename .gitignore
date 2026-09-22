@@ -34,3 +34,8 @@ output/
 # Operating system files
 .DS_Store
 Thumbs.db
+
+# Proxmox Backup Client local credentials
+pbs-backup.env
+token.secret
+*.pbs-secret
