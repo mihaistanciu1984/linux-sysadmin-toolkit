@@ -25,6 +25,7 @@ The repository is intended as a reference for system administrators, infrastruct
 | Oracle Linux / Networking | [Static IPv4 configuration](docs/oracle-linux/networking/static-ip.md) | [Static IP configuration tool](scripts/oracle-linux/networking/configure_static_ip.sh) |
 | Oracle Linux / System | [Enable GNOME Desktop](docs/oracle-linux/system/enable-gui.md) | Commands included |
 | Oracle Linux / System | [Scheduled user logout](docs/oracle-linux/system/scheduled-user-logout.md) | [User logout tool](scripts/oracle-linux/system/logout_logged_users.sh) |
+| Remote Access | [XRDP on Ubuntu 24.04](docs/remote-access/xrdp-ubuntu-24.04.md) | [XRDP installer](scripts/remote-access/install_xrdp_ubuntu.sh) |
 | Security | [OpenSSH server hardening](docs/security/ssh-hardening.md) | [SSH configuration audit](scripts/security/audit_ssh_config.sh) |
 | Storage | [Disk usage troubleshooting](docs/system/disk-usage.md) | [Disk usage checker](scripts/system/check_disk_usage.sh) |
 | System | [CPU and load troubleshooting](docs/system/cpu-troubleshooting.md) | [CPU load checker](scripts/system/check_cpu_load.sh) |
