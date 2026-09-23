@@ -41,6 +41,7 @@ The repository is intended as a reference for system administrators, infrastruct
 | Virtualization / Proxmox | [Simple PBS filesystem backup](docs/virtualization/proxmox/pbs-simple-backup.md) | [Simple backup script](scripts/virtualization/proxmox/auto_pbs_backup_simple.sh) |
 | Virtualization / Proxmox | [Useful Proxmox host commands](docs/virtualization/proxmox/useful-host-commands.md) | Command reference |
 | Virtualization / Proxmox | [Recover an LVM-thin pool](docs/virtualization/proxmox/recover-lvm-thin-pool.md) | Storage recovery procedure |
+| Virtualization / Proxmox | [Upgrade PBS 3 to PBS 4](docs/virtualization/proxmox/upgrade-pbs-3-to-4.md) | Major upgrade procedure |
 ## Repository structure
 .
 |-- docs/
