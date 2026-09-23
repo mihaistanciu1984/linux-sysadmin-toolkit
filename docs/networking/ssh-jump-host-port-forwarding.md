@@ -163,10 +163,14 @@ Verify that:
 - the jump host can reach the private system;
 - a firewall is not blocking the connection.
 
-# Opțiunile folosite în comandă:
+# The options used in the command:
 
 -L create local port forwarding;
+
 -N doesn't execute a command on the server;
+
 -T don't open an interactive terminal;
+
 ExitOnForwardFailure=yes stop the command if the tunnel can't be created;
+
 ServerAliveInterval=60 keep the connection active.
