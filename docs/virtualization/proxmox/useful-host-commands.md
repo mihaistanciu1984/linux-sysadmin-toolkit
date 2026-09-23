@@ -811,6 +811,99 @@ Verify the result:
 ```bash
 ls -l /opt/report.txt
 ```
+## 22. VM and container configuration locations
+
+Proxmox stores QEMU virtual machine configuration files in:
+
+```text
+/etc/pve/qemu-server/
+```
+
+Each VM has a configuration file based on its VM ID:
+
+```text
+/etc/pve/qemu-server/<VMID>.conf
+```
+
+Example:
+
+```text
+/etc/pve/qemu-server/100.conf
+```
+
+List all VM configuration files:
+
+```bash
+ls -lh /etc/pve/qemu-server/
+```
+
+Display a VM configuration:
+
+```bash
+qm config 100
+```
+
+Proxmox stores LXC container configuration files in:
+
+```text
+/etc/pve/lxc/
+```
+
+Each container has a configuration file based on its container ID:
+
+```text
+/etc/pve/lxc/<CTID>.conf
+```
+
+Example:
+
+```text
+/etc/pve/lxc/200.conf
+```
+
+List all container configuration files:
+
+```bash
+ls -lh /etc/pve/lxc/
+```
+
+Display a container configuration:
+
+```bash
+pct config 200
+```
+
+> These directories contain configuration files, not VM or container disk data.
+
+The actual disk location depends on the configured Proxmox storage.
+
+Display the disk volumes assigned to a VM:
+
+```bash
+qm config 100 |
+    grep -E '^(ide|sata|scsi|virtio|efidisk|tpmstate)[0-9]+:'
+```
+
+Display the physical path of a volume when supported by the storage backend:
+
+```bash
+pvesm path <STORAGE-ID:VOLUME-ID>
+```
+
+Example:
+
+```bash
+pvesm path local-lvm:vm-100-disk-0
+```
+
+View the configured Proxmox storage:
+
+```bash
+pvesm status
+```
+
+The `/etc/pve` directory is managed by the Proxmox cluster filesystem. Avoid editing or copying configuration files while the corresponding VM or container is running.
+
 ## Important notes
 
 - SCP normally uses SSH port `22`.
