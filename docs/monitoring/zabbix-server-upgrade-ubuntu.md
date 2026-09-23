@@ -11,6 +11,24 @@ This procedure applies to:
 
 For older major versions, review the official upgrade path before continuing.
 
+## Recommended automated preparation
+
+The preparation script can perform the version checks, stop the services and create the required backups:
+
+```bash
+sudo bash prepare_zabbix_upgrade_ubuntu.sh
+```
+
+The script does not upgrade packages or modify the database schema.
+
+After the script completes successfully, continue directly with:
+
+```text
+Step 7: Install the Zabbix 7.0 repository
+```
+
+To perform the preparation manually, follow Steps 1 through 6 below.
+
 ## 1. Check the current versions
 
 ```bash
