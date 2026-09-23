@@ -19,6 +19,7 @@ The repository is intended as a reference for system administrators, infrastruct
 | Networking | [DNS troubleshooting](docs/networking/dns-troubleshooting.md) | [DNS checker](scripts/networking/check_dns.sh) |
 | Networking | [Samba installation and file sharing](docs/networking/samba-file-sharing.md) | Configuration commands |
 | Networking | [Share a local USB device with a remote VM](docs/networking/usb-sharing-through-jump-host.md) | Manual procedure |
+| Networking | [Mount remote directories with SSHFS](docs/networking/sshfs-mount.md) | SSHFS commands |
 | Oracle Linux / Backup | [Install Proxmox Backup Client](docs/oracle-linux/backup/install-pbs-client.md) | [PBS client installer](scripts/oracle-linux/backup/install_pbs_client.sh) |
 | Oracle Linux / Database | [Install Oracle Database XE 21c](docs/oracle-linux/database/install-oracle-database-xe.md) | Commands included |
 | Oracle Linux / Networking | [Static IPv4 configuration](docs/oracle-linux/networking/static-ip.md) | [Static IP configuration tool](scripts/oracle-linux/networking/configure_static_ip.sh) |
