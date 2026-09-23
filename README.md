@@ -35,6 +35,7 @@ The repository is intended as a reference for system administrators, infrastruct
 | System | [Memory troubleshooting](docs/system/memory-troubleshooting.md) | [Memory usage checker](scripts/system/check_memory_usage.sh) |
 | System | [Systemd service management](docs/system/systemd-services.md) | [Service status checker](scripts/system/check_service.sh) |
 | Virtualization / Proxmox | [Check Ceph cluster health](docs/virtualization/proxmox/check-ceph-cluster.md) | Diagnostic commands |
+| Virtualization / Proxmox | [Ceph cluster maintenance](docs/virtualization/proxmox/ceph-cluster-maintenance.md) | Maintenance command reference |
 | Virtualization / Proxmox | [Copy PBS snapshots between datastores](docs/virtualization/proxmox/pbs-bulk-snapshot-move.md) | [PBS datastore copy script](scripts/virtualization/proxmox/pbs-copy-datastore.sh) |
 | Virtualization / Proxmox | [Delete a ZFS pool](docs/virtualization/proxmox/delete-zfs-pool.md) | Destructive procedure |
 | Virtualization / Proxmox | [Install Proxmox Backup Client](docs/virtualization/proxmox/pbs-client-installation.md) | [PBS client installer](scripts/virtualization/proxmox/install_pbs_client.sh) |
