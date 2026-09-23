@@ -1,3 +1,5 @@
+> New to this repository? Read the [Start Here guide](docs/start-here.md) before running any procedure or script.
+
 # Linux System Administration Toolkit
 
 A practical collection of Linux administration procedures, troubleshooting guides and reusable Bash tools.
@@ -8,6 +10,7 @@ The repository is intended as a reference for system administrators, infrastruct
 
 | Category | Procedure | Tool |
 |---|---|---|
+| General | [Start Here](docs/start-here.md) | Beginner navigation and safety guide |
 | Cisco | [Connect two Cisco switches safely](docs/cisco/connect-switches-safely.md) | IOS command reference |
 | Database | [Reset MySQL or MariaDB root password](docs/database/reset-mysql-mariadb-root-password.md) | Manual recovery procedure |
 | HTCondor | [HTCondor cluster installation](docs/htcondor/cluster-installation.md) | [Role installer](scripts/htcondor/install_htcondor_role.sh) |
