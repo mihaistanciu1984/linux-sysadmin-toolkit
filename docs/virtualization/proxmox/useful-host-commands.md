@@ -673,3 +673,150 @@ sudo dmidecode -t 17 |
 ```
 
 > `dmidecode` reports information supplied by the system firmware. Some fields may be empty or contain generic manufacturer values, especially on virtual machines.
+## 21. Copy files with SCP
+
+`scp` securely copies files between computers using SSH.
+
+General format:
+
+```bash
+scp SOURCE DESTINATION
+```
+
+A remote location has this format:
+
+```text
+USER@REMOTE_HOST:/PATH
+```
+
+## Copy a file to another computer
+
+```bash
+scp report.txt example-user@192.0.2.10:/tmp/
+```
+
+Command explanation:
+
+| Part | Meaning |
+|---|---|
+| `scp` | Secure copy command |
+| `report.txt` | File being copied |
+| `example-user` | User on the remote computer |
+| `192.0.2.10` | Remote computer IP address |
+| `/tmp/` | Destination folder |
+
+The colon `:` indicates that `/tmp/` is located on the remote computer.
+
+## Copy a file from another computer
+
+```bash
+scp example-user@192.0.2.10:/tmp/report.txt .
+```
+
+The dot `.` means the current local directory.
+
+## Copy an entire folder
+
+Use `-r` to copy a directory and its contents:
+
+```bash
+scp -r \
+    reports \
+    example-user@192.0.2.10:/tmp/
+```
+
+## Use a different SSH port
+
+Use uppercase `-P`:
+
+```bash
+scp -P 2222 \
+    report.txt \
+    example-user@192.0.2.10:/tmp/
+```
+
+## Use an SSH key
+
+```bash
+scp \
+    -i /path/to/private-key \
+    report.txt \
+    example-user@192.0.2.10:/tmp/
+```
+
+## Windows PowerShell examples
+
+Copy a Windows file to a Linux server:
+
+```powershell
+scp "C:\Users\example-user\Documents\report.txt" example-user@192.0.2.10:/tmp/
+```
+
+Copy a file from Linux to Windows:
+
+```powershell
+scp example-user@192.0.2.10:/tmp/report.txt "C:\Users\example-user\Downloads\"
+```
+## Copy to a protected directory
+
+A normal user usually cannot copy files directly into protected directories such as:
+
+```text
+/etc/
+/opt/
+/usr/local/
+/root/
+```
+
+For example, this command may return `Permission denied`:
+
+```bash
+scp report.txt example-user@192.0.2.10:/opt/
+```
+
+Copy the file to `/tmp` first:
+
+```bash
+scp report.txt example-user@192.0.2.10:/tmp/
+```
+
+Connect to the remote computer:
+
+```bash
+ssh example-user@192.0.2.10
+```
+
+Move the file to the protected directory using `sudo`:
+
+```bash
+sudo mv /tmp/report.txt /opt/
+```
+
+Set the required owner and permissions:
+
+```bash
+sudo chown root:root /opt/report.txt
+sudo chmod 644 /opt/report.txt
+```
+
+For an executable script:
+
+```bash
+sudo chown root:root /opt/script.sh
+sudo chmod 750 /opt/script.sh
+```
+
+Verify the result:
+
+```bash
+ls -l /opt/report.txt
+```
+## Important notes
+
+- SCP normally uses SSH port `22`.
+- The SSH service must be running on the remote computer.
+- Use `-r` when copying folders.
+- Use uppercase `-P` for a different SSH port.
+- The remote user must have permission to access the destination folder.
+- If the user cannot write to the destination, copy the file to `/tmp` and move it with `sudo`.
+- Do not use `chmod 777` to solve permission problems.
