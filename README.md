@@ -21,6 +21,8 @@ The repository is intended as a reference for system administrators, infrastruct
 | HTCondor | [Role configuration and validation](docs/htcondor/role-configuration-validation.md) | [Pool checker](scripts/htcondor/check_htcondor_pool.sh) |
 | Virtualization / Proxmox | [Install Proxmox Backup Client](docs/virtualization/proxmox/pbs-client-installation.md) | [PBS client installer](scripts/virtualization/proxmox/install_pbs_client.sh) |
 | Virtualization / Proxmox | [Linux backup to Proxmox Backup Server](docs/virtualization/proxmox/pbs-client-backup.md) | [PBS backup script](scripts/virtualization/proxmox/auto_pbs_backup.sh) |
+| Virtualization / Proxmox | [Simple PBS filesystem backup](docs/virtualization/proxmox/pbs-simple-backup.md) | [Simple backup script](scripts/virtualization/proxmox/auto_pbs_backup_simple.sh) |
+| Virtualization / Proxmox | [Check Ceph cluster health](docs/virtualization/proxmox/check-ceph-cluster.md) | Diagnostic commands |
 | Oracle Linux / Networking | [Static IPv4 configuration](docs/oracle-linux/networking/static-ip.md) | [Static IP configuration tool](scripts/oracle-linux/networking/configure_static_ip.sh) |
 | Oracle Linux / System | [Enable GNOME Desktop](docs/oracle-linux/system/enable-gui.md) | Commands included |
 | Oracle Linux / System | [Scheduled user logout](docs/oracle-linux/system/scheduled-user-logout.md) | [User logout tool](scripts/oracle-linux/system/logout_logged_users.sh) |
