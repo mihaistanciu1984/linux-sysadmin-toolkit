@@ -17,6 +17,80 @@ This repository contains practical procedures and scripts for:
 
 The documentation is written to help junior system administrators understand not only which command to run, but also why it is required and how to verify the result.
 
+## Identify the command environment
+
+Commands from different environments cannot always be used interchangeably.
+
+| Prompt example | Environment |
+|---|---|
+| `PS C:\>` | Windows PowerShell |
+| `user@server:~$` | Linux normal user |
+| `root@server:~#` | Linux root user |
+| `Switch>` | Cisco user EXEC mode |
+| `Switch#` | Cisco privileged EXEC mode |
+| `Switch(config)#` | Cisco configuration mode |
+
+Do not type the prompt itself.
+
+For example, if the documentation displays:
+
+```text
+root@server:~# ceph -s
+```
+
+run only:
+
+```bash
+ceph -s
+```
+
+### Windows and Linux path differences
+
+Windows PowerShell normally uses paths such as:
+
+```text
+.\scripts\system\check_disk_usage.sh
+```
+
+Bash and WSL use:
+
+```text
+./scripts/system/check_disk_usage.sh
+```
+
+When running a Bash script through WSL from PowerShell, use:
+
+```powershell
+wsl bash ./scripts/system/check_disk_usage.sh
+```
+
+Do not pass a PowerShell path containing backslashes directly to Bash.
+
+## Understand command symbols
+
+| Symbol | Meaning |
+|---|---|
+| `<VALUE>` | Replace with a real value |
+| `\` | Command continues on the next line in Bash |
+| `|` | Sends output from one command to another |
+| `>` | Replaces the contents of a file |
+| `>>` | Appends output to a file |
+| `&&` | Runs the next command only if the first succeeds |
+| `Ctrl+C` | Stops the currently running command |
+| `q` | Exits tools such as `less`, `git diff` or some status viewers |
+
+Example:
+
+```bash
+ssh <USERNAME>@<SERVER-IP>
+```
+
+Do not run it literally. Replace the placeholders:
+
+```bash
+ssh example-user@192.0.2.10
+```
+
 ## Before running any command
 
 Never copy and run a command without first checking:
@@ -378,6 +452,29 @@ Use a script when:
 
 Prefer read-only diagnostic scripts before configuration-changing scripts.
 
+## Quick navigation
+
+Use this table when you already know what type of problem you have.
+
+| I need to... | Start with |
+|---|---|
+| Check disk space | [Disk usage troubleshooting](system/disk-usage.md) |
+| Investigate high CPU | [CPU troubleshooting](system/cpu-troubleshooting.md) |
+| Investigate high memory | [Memory troubleshooting](system/memory-troubleshooting.md) |
+| Troubleshoot a service | [Systemd service management](system/systemd-services.md) |
+| Check system logs | [Linux log analysis](system/log-analysis.md) |
+| Troubleshoot network access | [Connectivity troubleshooting](networking/connectivity-troubleshooting.md) |
+| Troubleshoot DNS | [DNS troubleshooting](networking/dns-troubleshooting.md) |
+| Configure a firewall | [UFW firewall on Ubuntu](security/ufw-firewall-ubuntu.md) |
+| Configure graphical remote access | [XRDP on Ubuntu](remote-access/xrdp-ubuntu-24.04.md) |
+| Check a Proxmox host | [Useful Proxmox commands](virtualization/proxmox/useful-host-commands.md) |
+| Check a Ceph cluster | [Check Ceph cluster health](virtualization/proxmox/check-ceph-cluster.md) |
+| Perform Ceph maintenance | [Ceph cluster maintenance](virtualization/proxmox/ceph-cluster-maintenance.md) |
+| Configure PBS backups | [PBS client backup](virtualization/proxmox/pbs-client-backup.md) |
+| Work with Oracle Linux | [Oracle Linux procedures](oracle-linux/) |
+| Configure a Cisco switch | [Cisco switch connection](cisco/connect-switches-safely.md) |
+| Work with HTCondor | [HTCondor procedures](htcondor/) |
+
 ## Recommended production workflow
 
 Before applying a procedure to production:
@@ -410,6 +507,35 @@ Recent changes:
 ```
 
 Remove passwords, tokens, internal addresses and customer information before publishing logs.
+
+## Stop before continuing when
+
+Stop the procedure and request assistance when:
+
+- the target server, disk, interface or VM is unclear;
+- the displayed disk names differ from the documentation;
+- a current backup does not exist;
+- the cluster has lost quorum;
+- Ceph already reports failed OSDs or inactive PGs;
+- the command would interrupt your only remote connection;
+- an unexpected error appears;
+- the proposed rollback procedure is unclear;
+- production data may be deleted.
+
+Commands requiring additional attention include:
+
+```text
+rm
+lvremove
+vgremove
+pvremove
+zpool destroy
+wipefs
+mkfs
+dd
+qm destroy
+pct destroy
+terraform destroy
 
 ## Disclaimer
 
