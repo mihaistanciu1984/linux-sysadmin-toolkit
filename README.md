@@ -11,7 +11,6 @@ The repository is intended as a reference for system administrators, infrastruct
 | Category | Procedure | Tool |
 |---|---|---|
 | General | [Start Here](docs/start-here.md) | Beginner navigation and safety guide |
-| Cisco | [Connect two Cisco switches safely](docs/cisco/connect-switches-safely.md) | IOS command reference |
 | Database | [Reset MySQL or MariaDB root password](docs/database/reset-mysql-mariadb-root-password.md) | Manual recovery procedure |
 | HTCondor | [HTCondor cluster installation](docs/htcondor/cluster-installation.md) | [Role installer](scripts/htcondor/install_htcondor_role.sh) |
 | HTCondor | [Role configuration and validation](docs/htcondor/role-configuration-validation.md) | [Pool checker](scripts/htcondor/check_htcondor_pool.sh) |
@@ -37,6 +36,7 @@ The repository is intended as a reference for system administrators, infrastruct
 | System | [Linux log analysis](docs/system/log-analysis.md) | [Recent error checker](scripts/system/check_recent_errors.sh) |
 | System | [Memory troubleshooting](docs/system/memory-troubleshooting.md) | [Memory usage checker](scripts/system/check_memory_usage.sh) |
 | System | [Systemd service management](docs/system/systemd-services.md) | [Service status checker](scripts/system/check_service.sh) |
+| Switching / Cisco | [Connect two Cisco switches safely](docs/cisco/connect-switches-safely.md) | IOS command reference |
 | Switching / NVIDIA | [NVIDIA Mellanox SN2100 initial setup](docs/switching/nvidia/sn2100-initial-setup.md) | NVUE configuration commands |
 | Virtualization / Proxmox | [Check Ceph cluster health](docs/virtualization/proxmox/check-ceph-cluster.md) | Diagnostic commands |
 | Virtualization / Proxmox | [Ceph cluster maintenance](docs/virtualization/proxmox/ceph-cluster-maintenance.md) | Maintenance command reference |
