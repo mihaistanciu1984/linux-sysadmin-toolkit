@@ -322,3 +322,354 @@ Common meanings:
 - `Failed` — device failure detected.
 
 > The displayed commands are read-only. Do not use StorCLI commands that modify disk states unless the RAID recovery procedure has been approved and the correct enclosure and slot have been identified.
+
+## 10. Check Proxmox storage usage
+
+Display all configured Proxmox storage:
+
+```bash
+pvesm status
+```
+
+Display the storage configuration:
+
+```bash
+cat /etc/pve/storage.cfg
+```
+
+Display mounted filesystems and their usage:
+
+```bash
+df -hT
+```
+
+## 11. Find large directories on `local`
+
+The default Proxmox `local` storage normally uses:
+
+```text
+/var/lib/vz
+```
+
+Check its filesystem usage:
+
+```bash
+df -hT /var/lib/vz
+```
+
+Display the size of its main directories:
+
+```bash
+du -xhd1 /var/lib/vz |
+    sort -h
+```
+
+Display the largest directories recursively:
+
+```bash
+du -xhd2 /var/lib/vz |
+    sort -h |
+    tail -20
+```
+
+The `-x` option prevents `du` from entering other mounted filesystems.
+
+Common Proxmox directories include:
+
+```text
+/var/lib/vz/dump
+/var/lib/vz/images
+/var/lib/vz/template
+```
+
+Check them individually:
+
+```bash
+du -sh /var/lib/vz/dump 2>/dev/null
+du -sh /var/lib/vz/images 2>/dev/null
+du -sh /var/lib/vz/template 2>/dev/null
+```
+
+## 12. Find large files on `local`
+
+Display files larger than 1 GB:
+
+```bash
+find /var/lib/vz \
+    -xdev \
+    -type f \
+    -size +1G \
+    -printf '%s %p\n' |
+    sort -nr |
+    numfmt --field=1 --to=iec |
+    head -20
+```
+
+Typical large files can include:
+
+- VM backups
+- ISO images
+- Container templates
+- VM disk images on directory storage
+
+Do not delete a file until you have identified which VM, backup or template uses it.
+
+## 13. Check `local-lvm` usage
+
+`local-lvm` normally uses LVM-thin and does not contain normal directories.
+
+Display physical volumes:
+
+```bash
+pvs
+```
+
+Display volume groups:
+
+```bash
+vgs
+```
+
+Display logical volumes and thin-pool usage:
+
+```bash
+lvs -a \
+    -o vg_name,lv_name,lv_size,pool_lv,data_percent,metadata_percent
+```
+
+A common Proxmox thin pool appears as:
+
+```text
+pve/data
+```
+
+Important fields:
+
+- `LV Size` — provisioned logical volume size.
+- `Data%` — percentage of data space in use.
+- `Meta%` — percentage of thin-pool metadata in use.
+- `Pool` — thin pool containing the VM volume.
+
+The displayed logical size of a thin-provisioned VM disk is not necessarily the amount of physical storage currently consumed.
+
+## 14. List volumes stored on `local-lvm`
+
+```bash
+pvesm list local-lvm
+```
+
+Display only the volume identifier and configured size:
+
+```bash
+pvesm list local-lvm |
+    awk 'NR == 1 || /vm-|subvol-/'
+```
+
+Typical volume names include:
+
+```text
+vm-200-disk-0
+vm-200-disk-1
+subvol-300-disk-0
+```
+
+The number after `vm-` or `subvol-` is normally the VM or container ID.
+
+## 15. Identify which VM uses an LVM volume
+
+List all virtual machines:
+
+```bash
+qm list
+```
+
+List all containers:
+
+```bash
+pct list
+```
+
+Check the disks attached to a VM:
+
+```bash
+qm config VM_ID |
+    grep -E '^(ide|sata|scsi|virtio|efidisk|tpmstate|unused)[0-9]*:'
+```
+
+Check the storage attached to a container:
+
+```bash
+pct config CT_ID |
+    grep -E '^(rootfs|mp[0-9]+):'
+```
+
+Search all VM configurations for a specific volume:
+
+```bash
+grep -R "vm-VM_ID-disk" \
+    /etc/pve/qemu-server 2>/dev/null
+```
+
+Do not remove logical volumes directly with `lvremove` unless you have confirmed that they are no longer referenced by Proxmox.
+
+## 16. Check the Proxmox node status
+
+Display CPU, memory and load information:
+
+```bash
+uptime
+free -h
+lscpu
+```
+
+Display block devices:
+
+```bash
+lsblk -o NAME,SIZE,TYPE,FSTYPE,MOUNTPOINTS,MODEL,SERIAL
+```
+
+Display failed services:
+
+```bash
+systemctl --failed
+```
+
+Display important errors from the current boot:
+
+```bash
+journalctl -p err -b --no-pager
+```
+
+## 17. Check the cluster status
+
+```bash
+pvecm status
+pvecm nodes
+```
+
+Verify:
+
+- Quorum status
+- Expected number of votes
+- Online cluster nodes
+- Node IDs and names
+
+## 18. Check virtual machines and containers
+
+List virtual machines:
+
+```bash
+qm list
+```
+
+Check a virtual machine:
+
+```bash
+qm status VM_ID
+qm config VM_ID
+```
+
+List containers:
+
+```bash
+pct list
+```
+
+Check a container:
+
+```bash
+pct status CT_ID
+pct config CT_ID
+```
+
+## 19. Check network configuration
+
+Display interfaces and IP addresses:
+
+```bash
+ip -br address
+```
+
+Display routes:
+
+```bash
+ip route
+```
+
+Display Linux bridges:
+
+```bash
+bridge link
+bridge vlan show
+```
+
+Display the persistent Proxmox network configuration:
+
+```bash
+cat /etc/network/interfaces
+```
+
+Do not modify the network configuration remotely without an alternative management connection.
+## 20. Display hardware and system information
+
+Display basic server manufacturer, model, serial number and UUID information:
+
+```bash
+sudo dmidecode -t 1
+```
+
+The command displays the SMBIOS **System Information** section.
+
+Typical fields include:
+
+```text
+Manufacturer
+Product Name
+Version
+Serial Number
+UUID
+SKU Number
+Family
+```
+
+Display a short system summary:
+
+```bash
+sudo dmidecode -t 1 |
+    grep -E 'Manufacturer|Product Name|Serial Number|UUID'
+```
+
+Display all available DMI/SMBIOS hardware information:
+
+```bash
+sudo dmidecode
+```
+
+Additional useful hardware queries:
+
+```bash
+sudo dmidecode -t system
+sudo dmidecode -t baseboard
+sudo dmidecode -t bios
+sudo dmidecode -t processor
+sudo dmidecode -t memory
+```
+
+Common numeric equivalents are:
+
+```bash
+sudo dmidecode -t 0    # BIOS information
+sudo dmidecode -t 1    # System information
+sudo dmidecode -t 2    # Baseboard information
+sudo dmidecode -t 4    # Processor information
+sudo dmidecode -t 17   # Memory device information
+```
+
+Display only installed memory modules:
+
+```bash
+sudo dmidecode -t 17 |
+    grep -E 'Size:|Type:|Speed:|Manufacturer:|Serial Number:|Part Number:'
+```
+
+> `dmidecode` reports information supplied by the system firmware. Some fields may be empty or contain generic manufacturer values, especially on virtual machines.
