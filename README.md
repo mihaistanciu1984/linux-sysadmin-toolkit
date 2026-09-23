@@ -40,6 +40,7 @@ The repository is intended as a reference for system administrators, infrastruct
 | Virtualization / Proxmox | [Linux backup to Proxmox Backup Server](docs/virtualization/proxmox/pbs-client-backup.md) | [PBS backup script](scripts/virtualization/proxmox/auto_pbs_backup.sh) |
 | Virtualization / Proxmox | [Simple PBS filesystem backup](docs/virtualization/proxmox/pbs-simple-backup.md) | [Simple backup script](scripts/virtualization/proxmox/auto_pbs_backup_simple.sh) |
 | Virtualization / Proxmox | [Useful Proxmox host commands](docs/virtualization/proxmox/useful-host-commands.md) | Command reference |
+| Virtualization / Proxmox | [Recover an LVM-thin pool](docs/virtualization/proxmox/recover-lvm-thin-pool.md) | Storage recovery procedure |
 ## Repository structure
 .
 |-- docs/
