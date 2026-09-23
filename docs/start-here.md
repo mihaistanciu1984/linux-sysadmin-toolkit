@@ -451,6 +451,9 @@ Use a script when:
 - no production credentials are stored inside it.
 
 Prefer read-only diagnostic scripts before configuration-changing scripts.
+When creating new documentation, start with the [procedure template](templates/procedure-template.md).
+
+Copy the template to the appropriate category, replace the title and the `<...>` placeholders, remove sections that do not apply, test the commands and update `README.md`.
 
 ## Quick navigation
 
