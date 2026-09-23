@@ -24,6 +24,7 @@ The repository is intended as a reference for system administrators, infrastruct
 | Virtualization / Proxmox | [Simple PBS filesystem backup](docs/virtualization/proxmox/pbs-simple-backup.md) | [Simple backup script](scripts/virtualization/proxmox/auto_pbs_backup_simple.sh) |
 | Virtualization / Proxmox | [Check Ceph cluster health](docs/virtualization/proxmox/check-ceph-cluster.md) | Diagnostic commands |
 | Virtualization / Proxmox | [Delete a ZFS pool](docs/virtualization/proxmox/delete-zfs-pool.md) | Destructive procedure |
+| Virtualization / Proxmox | [Copy PBS snapshots between datastores](docs/virtualization/proxmox/pbs-bulk-snapshot-move.md) | [PBS datastore copy script](scripts/virtualization/proxmox/pbs-copy-datastore.sh) |
 | Oracle Linux / Networking | [Static IPv4 configuration](docs/oracle-linux/networking/static-ip.md) | [Static IP configuration tool](scripts/oracle-linux/networking/configure_static_ip.sh) |
 | Oracle Linux / System | [Enable GNOME Desktop](docs/oracle-linux/system/enable-gui.md) | Commands included |
 | Oracle Linux / System | [Scheduled user logout](docs/oracle-linux/system/scheduled-user-logout.md) | [User logout tool](scripts/oracle-linux/system/logout_logged_users.sh) |
