@@ -6,34 +6,34 @@ The repository is intended as a reference for system administrators, infrastruct
 
  ## Current content
 
-| Category                 | Procedure                                                                                 | Tool                                                                                                                  |
-| ------------------------ | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| Storage                  | [Disk usage troubleshooting](docs/system/disk-usage.md)                                   | [Disk usage checker](scripts/system/check_disk_usage.sh)                                                              |
-| System                   | [Memory troubleshooting](docs/system/memory-troubleshooting.md)                           | [Memory usage checker](scripts/system/check_memory_usage.sh)                                                          |
-| System                   | [CPU and load troubleshooting](docs/system/cpu-troubleshooting.md)                        | [CPU load checker](scripts/system/check_cpu_load.sh)                                                                  |
-| System                   | [Systemd service management](docs/system/systemd-services.md)                             | [Service status checker](scripts/system/check_service.sh)                                                             |
-| System                   | [Linux log analysis](docs/system/log-analysis.md)                                         | [Recent error checker](scripts/system/check_recent_errors.sh)                                                         |
-| Networking               | [Connectivity troubleshooting](docs/networking/connectivity-troubleshooting.md)           | [Connectivity checker](scripts/networking/check_connectivity.sh)                                                      |
-| Networking               | [DNS troubleshooting](docs/networking/dns-troubleshooting.md)                             | [DNS checker](scripts/networking/check_dns.sh)                                                                        |
-| Networking | [Samba installation and file sharing](docs/networking/samba-file-sharing.md) | Configuration commands |
-| Security                 | [OpenSSH server hardening](docs/security/ssh-hardening.md)                                | [SSH configuration audit](scripts/security/audit_ssh_config.sh)                                                       |
+| Category | Procedure | Tool |
+|---|---|---|
 | HTCondor | [HTCondor cluster installation](docs/htcondor/cluster-installation.md) | [Role installer](scripts/htcondor/install_htcondor_role.sh) |
 | HTCondor | [Role configuration and validation](docs/htcondor/role-configuration-validation.md) | [Pool checker](scripts/htcondor/check_htcondor_pool.sh) |
-| Virtualization / Proxmox | [Install Proxmox Backup Client](docs/virtualization/proxmox/pbs-client-installation.md) | [PBS client installer](scripts/virtualization/proxmox/install_pbs_client.sh) |
-| Virtualization / Proxmox | [Linux backup to Proxmox Backup Server](docs/virtualization/proxmox/pbs-client-backup.md) | [PBS backup script](scripts/virtualization/proxmox/auto_pbs_backup.sh) |
-| Virtualization / Proxmox | [Simple PBS filesystem backup](docs/virtualization/proxmox/pbs-simple-backup.md) | [Simple backup script](scripts/virtualization/proxmox/auto_pbs_backup_simple.sh) |
-| Virtualization / Proxmox | [Check Ceph cluster health](docs/virtualization/proxmox/check-ceph-cluster.md) | Diagnostic commands |
-| Virtualization / Proxmox | [Delete a ZFS pool](docs/virtualization/proxmox/delete-zfs-pool.md) | Destructive procedure |
-| Virtualization / Proxmox | [Copy PBS snapshots between datastores](docs/virtualization/proxmox/pbs-bulk-snapshot-move.md) | [PBS datastore copy script](scripts/virtualization/proxmox/pbs-copy-datastore.sh) |
+| Monitoring | [Glances system monitoring](docs/monitoring/glances.md) | Planned |
+| Monitoring | [Migrate Zabbix Server to a new host](docs/monitoring/zabbix-server-migration.md) | Manual procedure |
+| Monitoring | [Upgrade Zabbix Server 7.0 on Ubuntu](docs/monitoring/zabbix-server-upgrade-ubuntu.md) | [Upgrade preparation and backup](scripts/monitoring/prepare_zabbix_upgrade_ubuntu.sh) |
+| Monitoring | [Zabbix Agent 2 on Ubuntu](docs/monitoring/zabbix-agent2-ubuntu.md) | [Ubuntu installer](scripts/monitoring/install_zabbix_agent2_ubuntu.sh) |
+| Networking | [Connectivity troubleshooting](docs/networking/connectivity-troubleshooting.md) | [Connectivity checker](scripts/networking/check_connectivity.sh) |
+| Networking | [DNS troubleshooting](docs/networking/dns-troubleshooting.md) | [DNS checker](scripts/networking/check_dns.sh) |
+| Networking | [Samba installation and file sharing](docs/networking/samba-file-sharing.md) | Configuration commands |
+| Oracle Linux / Backup | [Install Proxmox Backup Client](docs/oracle-linux/backup/install-pbs-client.md) | [PBS client installer](scripts/oracle-linux/backup/install_pbs_client.sh) |
+| Oracle Linux / Database | [Install Oracle Database XE 21c](docs/oracle-linux/database/install-oracle-database-xe.md) | Commands included |
 | Oracle Linux / Networking | [Static IPv4 configuration](docs/oracle-linux/networking/static-ip.md) | [Static IP configuration tool](scripts/oracle-linux/networking/configure_static_ip.sh) |
 | Oracle Linux / System | [Enable GNOME Desktop](docs/oracle-linux/system/enable-gui.md) | Commands included |
 | Oracle Linux / System | [Scheduled user logout](docs/oracle-linux/system/scheduled-user-logout.md) | [User logout tool](scripts/oracle-linux/system/logout_logged_users.sh) |
-| Oracle Linux / Backup | [Install Proxmox Backup Client](docs/oracle-linux/backup/install-pbs-client.md) | [PBS client installer](scripts/oracle-linux/backup/install_pbs_client.sh) |
-| Oracle Linux / Database | [Install Oracle Database XE 21c](docs/oracle-linux/database/install-oracle-database-xe.md) | Commands included |
-| Monitoring | [Zabbix Agent 2 on Ubuntu](docs/monitoring/zabbix-agent2-ubuntu.md) | [Ubuntu installer](scripts/monitoring/install_zabbix_agent2_ubuntu.sh) |
-| Monitoring | [Upgrade Zabbix Server 7.0 on Ubuntu](docs/monitoring/zabbix-server-upgrade-ubuntu.md) | [Upgrade preparation and backup](scripts/monitoring/prepare_zabbix_upgrade_ubuntu.sh) |
-| Monitoring | [Migrate Zabbix Server to a new host](docs/monitoring/zabbix-server-migration.md) | Manual procedure |
-| Monitoring | [Glances system monitoring](docs/monitoring/glances.md) | Planned |
+| Security | [OpenSSH server hardening](docs/security/ssh-hardening.md) | [SSH configuration audit](scripts/security/audit_ssh_config.sh) |
+| Storage | [Disk usage troubleshooting](docs/system/disk-usage.md) | [Disk usage checker](scripts/system/check_disk_usage.sh) |
+| System | [CPU and load troubleshooting](docs/system/cpu-troubleshooting.md) | [CPU load checker](scripts/system/check_cpu_load.sh) |
+| System | [Linux log analysis](docs/system/log-analysis.md) | [Recent error checker](scripts/system/check_recent_errors.sh) |
+| System | [Memory troubleshooting](docs/system/memory-troubleshooting.md) | [Memory usage checker](scripts/system/check_memory_usage.sh) |
+| System | [Systemd service management](docs/system/systemd-services.md) | [Service status checker](scripts/system/check_service.sh) |
+| Virtualization / Proxmox | [Check Ceph cluster health](docs/virtualization/proxmox/check-ceph-cluster.md) | Diagnostic commands |
+| Virtualization / Proxmox | [Copy PBS snapshots between datastores](docs/virtualization/proxmox/pbs-bulk-snapshot-move.md) | [PBS datastore copy script](scripts/virtualization/proxmox/pbs-copy-datastore.sh) |
+| Virtualization / Proxmox | [Delete a ZFS pool](docs/virtualization/proxmox/delete-zfs-pool.md) | Destructive procedure |
+| Virtualization / Proxmox | [Install Proxmox Backup Client](docs/virtualization/proxmox/pbs-client-installation.md) | [PBS client installer](scripts/virtualization/proxmox/install_pbs_client.sh) |
+| Virtualization / Proxmox | [Linux backup to Proxmox Backup Server](docs/virtualization/proxmox/pbs-client-backup.md) | [PBS backup script](scripts/virtualization/proxmox/auto_pbs_backup.sh) |
+| Virtualization / Proxmox | [Simple PBS filesystem backup](docs/virtualization/proxmox/pbs-simple-backup.md) | [Simple backup script](scripts/virtualization/proxmox/auto_pbs_backup_simple.sh) |
 ## Repository structure
 .
 |-- docs/
