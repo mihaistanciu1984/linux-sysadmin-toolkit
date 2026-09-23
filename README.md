@@ -27,6 +27,7 @@ The repository is intended as a reference for system administrators, infrastruct
 | Oracle Linux / System | [Scheduled user logout](docs/oracle-linux/system/scheduled-user-logout.md) | [User logout tool](scripts/oracle-linux/system/logout_logged_users.sh) |
 | Remote Access | [XRDP on Ubuntu 24.04](docs/remote-access/xrdp-ubuntu-24.04.md) | [XRDP installer](scripts/remote-access/install_xrdp_ubuntu.sh) |
 | Security | [OpenSSH server hardening](docs/security/ssh-hardening.md) | [SSH configuration audit](scripts/security/audit_ssh_config.sh) |
+| Security | [UFW firewall on Ubuntu](docs/security/ufw-firewall-ubuntu.md) | Configuration commands |
 | Storage | [Disk usage troubleshooting](docs/system/disk-usage.md) | [Disk usage checker](scripts/system/check_disk_usage.sh) |
 | System | [CPU and load troubleshooting](docs/system/cpu-troubleshooting.md) | [CPU load checker](scripts/system/check_cpu_load.sh) |
 | System | [Linux log analysis](docs/system/log-analysis.md) | [Recent error checker](scripts/system/check_recent_errors.sh) |
