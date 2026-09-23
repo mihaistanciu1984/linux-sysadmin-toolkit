@@ -9,13 +9,13 @@ The repository is intended as a reference for system administrators, infrastruct
 | Category                 | Procedure                                                                                 | Tool                                                                                                                  |
 | ------------------------ | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
 | Storage                  | [Disk usage troubleshooting](docs/system/disk-usage.md)                                   | [Disk usage checker](scripts/system/check_disk_usage.sh)                                                              |
-| Monitoring               | [Glances system monitoring](docs/monitoring/glances.md)                                   | Planned                                                                                                               |
 | System                   | [Memory troubleshooting](docs/system/memory-troubleshooting.md)                           | [Memory usage checker](scripts/system/check_memory_usage.sh)                                                          |
 | System                   | [CPU and load troubleshooting](docs/system/cpu-troubleshooting.md)                        | [CPU load checker](scripts/system/check_cpu_load.sh)                                                                  |
 | System                   | [Systemd service management](docs/system/systemd-services.md)                             | [Service status checker](scripts/system/check_service.sh)                                                             |
 | System                   | [Linux log analysis](docs/system/log-analysis.md)                                         | [Recent error checker](scripts/system/check_recent_errors.sh)                                                         |
 | Networking               | [Connectivity troubleshooting](docs/networking/connectivity-troubleshooting.md)           | [Connectivity checker](scripts/networking/check_connectivity.sh)                                                      |
 | Networking               | [DNS troubleshooting](docs/networking/dns-troubleshooting.md)                             | [DNS checker](scripts/networking/check_dns.sh)                                                                        |
+| Networking | [Samba installation and file sharing](docs/networking/samba-file-sharing.md) | Configuration commands |
 | Security                 | [OpenSSH server hardening](docs/security/ssh-hardening.md)                                | [SSH configuration audit](scripts/security/audit_ssh_config.sh)                                                       |
 | HTCondor | [HTCondor cluster installation](docs/htcondor/cluster-installation.md) | [Role installer](scripts/htcondor/install_htcondor_role.sh) |
 | HTCondor | [Role configuration and validation](docs/htcondor/role-configuration-validation.md) | [Pool checker](scripts/htcondor/check_htcondor_pool.sh) |
@@ -33,6 +33,7 @@ The repository is intended as a reference for system administrators, infrastruct
 | Monitoring | [Zabbix Agent 2 on Ubuntu](docs/monitoring/zabbix-agent2-ubuntu.md) | [Ubuntu installer](scripts/monitoring/install_zabbix_agent2_ubuntu.sh) |
 | Monitoring | [Upgrade Zabbix Server 7.0 on Ubuntu](docs/monitoring/zabbix-server-upgrade-ubuntu.md) | [Upgrade preparation and backup](scripts/monitoring/prepare_zabbix_upgrade_ubuntu.sh) |
 | Monitoring | [Migrate Zabbix Server to a new host](docs/monitoring/zabbix-server-migration.md) | Manual procedure |
+| Monitoring | [Glances system monitoring](docs/monitoring/glances.md) | Planned |
 ## Repository structure
 .
 |-- docs/
