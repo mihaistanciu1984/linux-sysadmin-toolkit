@@ -28,6 +28,7 @@ The repository is intended as a reference for system administrators, infrastruct
 | Oracle Linux / Database | [Install Oracle Database XE 21c](docs/oracle-linux/database/install-oracle-database-xe.md) | Commands included |
 | Monitoring | [Zabbix Agent 2 on Ubuntu](docs/monitoring/zabbix-agent2-ubuntu.md) | [Ubuntu installer](scripts/monitoring/install_zabbix_agent2_ubuntu.sh) |
 | Monitoring | [Upgrade Zabbix Server 7.0 on Ubuntu](docs/monitoring/zabbix-server-upgrade-ubuntu.md) | [Upgrade preparation and backup](scripts/monitoring/prepare_zabbix_upgrade_ubuntu.sh) |
+| Monitoring | [Migrate Zabbix Server to a new host](docs/monitoring/zabbix-server-migration.md) | Manual procedure |
 ## Repository structure
 .
 |-- docs/
