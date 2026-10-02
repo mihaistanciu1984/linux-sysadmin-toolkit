@@ -1,0 +1,43 @@
+Cum copiezi un PDF în proiect și îl urci în Git
+1. Deschide terminalul PowerShell în VS Code
+cd C:\UsersPATH\linux-sysadmin-toolkit
+
+2. Creează folderul pentru documentație
+New-Item -ItemType Directory -Force .\docs\backup\pbs
+
+3. Copiază PDF-ul în proiect
+Exemplu:
+Copy-Item `
+  "C:\Users\PATH\Downloads\pbs-megaraid-failed-hdd-replacement.pdf" `
+  ".\docs\backup\pbs\pbs-megaraid-failed-hdd-replacement.pdf"
+
+4. Verifică dacă fișierul a fost copiat
+Test-Path .\docs\backup\pbs\pbs-megaraid-failed-hdd-replacement.pdf
+
+Rezultatul trebuie să fie:
+True
+
+5. Verifică modificările Git
+git status
+
+6. Adaugă PDF-ul în staging
+git add -- docs/backup/pbs/pbs-megaraid-failed-hdd-replacement.pdf
+
+7. Verifică fișierul pregătit pentru commit
+git diff --cached --stat
+git diff --cached --check
+
+8. Creează commit-ul
+git commit -m "Add PBS MegaRAID failed HDD replacement guide"
+
+9. Trimite modificarea pe GitHub
+git push origin main
+
+10. Verifică rezultatul final
+git status
+
+Rezultatul dorit:
+nothing to commit, working tree clean
+
+Pe scurt, fluxul este:
+Copy-Item → git status → git add → git diff --cached --check → git commit → git push
