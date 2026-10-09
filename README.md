@@ -6,6 +6,24 @@ A practical collection of Linux administration procedures, troubleshooting guide
 
 The repository is intended as a reference for system administrators, infrastructure engineers and DevOps professionals working with Linux servers.
 
+## Related projects
+
+### Terraform Proxmox Infrastructure
+
+A Terraform and Ansible project for managing virtual machines and collecting read-only Proxmox host inventory information.
+
+Main features:
+
+- Create and destroy Ubuntu virtual machines
+- Create and destroy Windows virtual machines
+- Configure Ubuntu virtual machines with Ansible
+- Check SSH, RDP and Zabbix connectivity
+- Collect hardware, storage, network, cluster and Ceph information
+- Generate locally saved Proxmox inventory reports
+- Use sanitized example inventories without production credentials
+
+[Open the Terraform Proxmox Infrastructure project](https://github.com/mihaistanciu1984/terraform-proxmox-infrastructure)
+
  ## Current content
 
 | Category | Procedure | Tool |
